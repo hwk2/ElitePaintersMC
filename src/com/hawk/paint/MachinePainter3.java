@@ -33,10 +33,10 @@ public class MachinePainter3 implements Listener {
 			Snowball s = (Snowball) e.getDamager();
 			if (s.getShooter() instanceof Player) {
 				Player shooter = (Player) s.getShooter();
-					if (shooter.getItemInHand().getType() == Material.IRON_AXE) {
+					if (shooter.getInventory().getItemInMainHand().getType() == Material.IRON_AXE) {
 						e.setDamage(2);
 						
-						if(!(shooter.getItemInHand().getType() == Material.IRON_AXE)) {
+						if(!(shooter.getInventory().getItemInMainHand().getType() == Material.IRON_AXE)) {
 							e.setCancelled(true);
 						}
 				}
