@@ -29,12 +29,8 @@ public class PaintSniper4 implements Listener {
 			Snowball s = (Snowball) e.getDamager();
 			if (s.getShooter() instanceof Player) {
 				Player shooter = (Player) s.getShooter();
-					if (shooter.getItemInHand().getType() == Material.GOLD_HOE) {
+					if (shooter.getInventory().getItemInMainHand().getType() == Material.GOLD_HOE) {
 						e.setDamage(16.5);
-						
-						if(!(shooter.getItemInHand().getType() == Material.GOLD_HOE)) {
-							e.setCancelled(true);
-						}
 				}
 			}
 		}
